@@ -70,7 +70,9 @@ const dbCli = dbAuth.cli({
   }
 });
 
-module.exports = [dbCli];
+module.exports = {
+  tasks: [dbCli]
+};
 ```
 
 You can now manage users with ex. `npx osjs-cli <task>`
