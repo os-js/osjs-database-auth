@@ -47,6 +47,10 @@ mysql> GRANT ALL ON osjsv3.* TO 'osjsv3'@'localhost';
 
 > *Note that the mysql users are not related to OS.js users.*
 
+<!-- -->
+
+> If you've already installed `@osjs/database-settings` module you can skip this step and use the same database and credentials.
+
 ## Installation
 
 Install the required OS.js module and database driver:
@@ -92,7 +96,7 @@ osjs.register(AuthServiceProvider, {
 
 By default OS.js is set up to log in with the `demo / demo` user for demonstration purposes.
 
-In your **`src/client/config`** file:
+In your **`src/client/config.js`** file:
 
 ```javascript
 module.exports = {
@@ -124,16 +128,14 @@ const dbAuth = require('@osjs/database-auth');
 
 // Create a database authentication instance
 const dbCli = dbAuth.cli({
-  connection: {
-    // Change this to match your local database server
-    type: 'mysql',
-    host: 'localhost',
-    username: 'osjsv3',
-    password: 'secret',
-    database: 'osjsv3',
+  // Change this to match your local database server
+  type: 'mysql',
+  host: 'localhost',
+  username: 'osjsv3',
+  password: 'secret',
+  database: 'osjsv3',
 
-    // See TypeORM documentation for more settings
-  }
+  // See TypeORM documentation for more settings
 });
 
 // Then finally add 'dbCli' to the tasks array
