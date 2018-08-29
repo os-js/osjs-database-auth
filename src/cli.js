@@ -59,6 +59,7 @@ module.exports = (cfg = {}) => cli => {
 
             return createPassword().then(password => {
               return repo.save({
+                groups: args.groups || 'admin',
                 username: args.username,
                 name: args.username,
                 password
