@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
-    "typeorm": "^0.2.7"
+    "typeorm": "^0.2.8"
   },
   "author": "Anders Evenrud <andersevenrud@gmail.com>",
   "license": "BSD-2-Clause",
@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/os-js/osjs-database-auth#readme",
   "devDependencies": {
-    "eslint": "^5.1.0"
+    "eslint": "^5.7.0"
   }
 }
