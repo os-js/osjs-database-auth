@@ -107,9 +107,30 @@ module.exports = (cfg = {}) => cli => {
   };
 
   return {
-    'user:list': listUsers,
-    'user:add': addUser,
-    'user:pwd': pwdUser,
-    'user:remove': removeUser
+    'user:list': {
+      description: 'Lists users in authentication database',
+      action: listUsers
+    },
+    'user:add': {
+      description: 'Adds a new user to the authentication database',
+      options: {
+        '--username <username>': 'Given username'
+      },
+      action: addUser
+    },
+    'user:pwd': {
+      description: 'Resets password in authentication database',
+      options: {
+        '--username <username>': 'Given username'
+      },
+      action: pwdUser
+    },
+    'user:remove': {
+      description: 'Removes user from authentication database',
+      options: {
+        '--username <username>': 'Given username'
+      },
+      action: removeUser
+    }
   };
 };
