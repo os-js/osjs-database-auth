@@ -114,7 +114,8 @@ module.exports = (cfg = {}) => cli => {
     'user:add': {
       description: 'Adds a new user to the authentication database',
       options: {
-        '--username <username>': 'Given username'
+        '--username <username>': 'Given username',
+        '--groups <groups>': 'A comma separated list of groups'
       },
       action: addUser
     },
