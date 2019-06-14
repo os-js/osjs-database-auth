@@ -89,7 +89,7 @@ const createPassword = () => promptPassword('Password: ')
   .then(pwd => encryptPassword(pwd));
 
 const comparePassword = (password, hash) => new Promise((resolve, reject) => {
-  bcrypt.compare(password, hash, (err,res) => resolve(res === true));
+  bcrypt.compare(password, hash, (err, res) => resolve(res === true));
 });
 
 const createDb = (options) => {

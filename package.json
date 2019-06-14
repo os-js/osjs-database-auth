@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/os-js/osjs-database-auth#readme",
   "devDependencies": {
-    "eslint": "^5.7.0"
+    "@osjs/eslint-config": "^1.0.0",
+    "eslint": "^5.16.0"
   }
 }
