@@ -22,8 +22,8 @@ To set this up, you need to do the following steps:
 1. Set up your database
 2. Install
 3. Configure Server
-5. Configure Client
-4. Configure CLI
+4. Configure Client
+5. Configure CLI
 6. Manage Users
 
 Please see the [OS.js Authentication Guide](https://manual.os-js.org/v3/guide/auth/) for general information.
@@ -32,7 +32,7 @@ Please see the [OS.js Authentication Guide](https://manual.os-js.org/v3/guide/au
 
 Before you begin you need to chose a database and set this up on your host system.
 
-This documentation uses `mysql` by default, but you can use any SQL flavor that TypeORM supports.
+This documentation uses **mysql** by default, but you can use [any SQL flavor](#notes) that TypeORM supports.
 
 The database and credentials you set up in this step has to be reflected in the configurations below.
 
@@ -165,6 +165,41 @@ You can now manage users with ex. `npx osjs-cli <task>`
 * `user:remove --username=STR` - Removes user
 
 Example: `npx osjs-cli user:add --username=anders`.
+
+## Notes
+
+If you want to use **sqlite** run `npm install sqlite3` and change the connection options to:
+
+```javascript
+{
+  connection: {
+    type: 'sqlite',
+    database: 'path/to/database.sql'
+  }
+}
+```
+
+For more information about configuration: https://typeorm.io/
+
+If you don't want to repeat the connection information over multiple files, for example create `src/database-connection.js` with the contents:
+
+```javascript
+module.exports = {
+  type: 'mysql',
+  host: 'localhost',
+  username: 'osjsv3',
+  password: 'secret',
+  database: 'osjsv3',
+}
+```
+
+and then in your scripts:
+
+```javascript
+{
+  connection: require('../database-connection.js')
+}
+```
 
 ## Contribution
 
