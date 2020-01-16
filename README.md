@@ -28,6 +28,8 @@ To set this up, you need to do the following steps:
 
 Please see the [OS.js Authentication Guide](https://manual.os-js.org/v3/guide/auth/) for general information.
 
+**You can find a complete example using docker on [github](https://github.com/andersevenrud/osjsv3-db-auth-example)**
+
 ## Set up your database
 
 Before you begin you need to chose a database and set this up on your host system.
