@@ -23,7 +23,7 @@ To set this up, you need to do the following steps:
 5. Configure CLI
 6. Manage Users
 
-Please see the [OS.js Authentication Guide](https://manual.os-js.org/v3/guide/auth/) for general information.
+Please see the [OS.js Authentication Guide](https://manual.os-js.org/guide/auth/) for general information.
 
 **You can find a complete example using docker on [github](https://github.com/andersevenrud/osjsv3-db-auth-example)**
 
@@ -209,7 +209,7 @@ and then in your scripts:
 
 ## Documentation
 
-See the [Official Manuals](https://manual.os-js.org/v3/) for articles, tutorials and guides.
+See the [Official Manuals](https://manual.os-js.org/) for articles, tutorials and guides.
 
 ## Links
 
